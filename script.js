@@ -38,7 +38,7 @@ const addButtonsToTodoList = function ( buttons ) {
     const buttonElement = $("<button>");
 
     buttonElement.html(button.name || "My button");
-    buttonElement.attr("disabled", "disabled");
+
     buttonElement.addClass(button.size || "small");
     buttonElement.addClass(button.color || "blue");
 
@@ -46,8 +46,8 @@ const addButtonsToTodoList = function ( buttons ) {
       buttonElement.click(runFunctionAndUpdateTasks(button.action));
     }
 
-    if (!button.disabled) {
-      buttonElement.removeAttr("disabled");
+    if (button.disabled || button.disabled === undefined) {
+      buttonElement.attr("disabled", "disabled");
     }
 
     $("#customToDoButtons").append(buttonElement);

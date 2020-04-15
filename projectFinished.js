@@ -38,6 +38,7 @@ let buttonAddToTop = {
   name: "Add to top",
   color: "purple",
   size: "small",
+  disabled: false,
   action: function () {
     const taskDescription = prompt("Please describe the task:");
     taskArr.splice(0,0,taskDescription);
@@ -50,6 +51,7 @@ let buttonAddToBottom = {
   name: "Add to bottom",
   color: "green",
   size: "medium",
+  disabled: false,
   action: function () {
     const taskDescription = prompt("Please describe the task:");
     taskArr.push(taskDescription);
@@ -58,11 +60,11 @@ let buttonAddToBottom = {
 
 buttons.push(buttonAddToBottom);
 
-
 let buttonRemoveFirst = {
   name: "Remove first",
   color: "red",
   size: "large",
+  disabled: false,
   action: function () {
     taskArr.shift();
   }
@@ -74,6 +76,7 @@ let buttonRemoveLast = {
   name: "Remove last",
   color: "purple",
   size: "large",
+  disabled: false,
   action: function () {
     taskArr.pop();
   }
@@ -85,6 +88,7 @@ let buttonClearList = {
   name: "Clear list",
   color: "red",
   size: "medium",
+  disabled: false,
   action: function () {
     taskArr = [];
   }
@@ -96,6 +100,7 @@ let buttonReverseList = {
   name: "Reverse list",
   color: "green",
   size: "large",
+  disabled: false,
   action: function () {
     taskArr.reverse();
   }
@@ -107,6 +112,7 @@ let buttonDefaultList = {
   name: "Set default list",
   color: "blue",
   size: "medium",
+  disabled: false,
   action: function () {
     taskArr = defaultTaskArr;
   }
@@ -118,6 +124,7 @@ let buttonReplaceAllTasks = {
   name: "Milk mania!",
   color: "green",
   size: "small",
+  disabled: false,
   action: function () {
     for (let i = 0; i < taskArr.length; i++ ) {
         taskArr[i] = "Buy milk";
@@ -131,6 +138,7 @@ let buttonReplaceIfTaskExists = {
   name: "Cookies and cream!",
   color: "red",
   size: "small",
+  disabled: false,
   action: function () {
     let listHasCookies = false;
 
@@ -154,6 +162,7 @@ let buttonRemoveLongTasks = {
   name: "Remove long tasks!",
   color: "green",
   size: "large",
+  disabled: false,
   action: function () {
     for (let i = taskArr.length - 1; i >= 0; i-- ) {
         if (taskArr[i].length > 5) {
