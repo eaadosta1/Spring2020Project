@@ -41,6 +41,3 @@ let buttons = [];
 //      - 'prompt' dialogue boxes returns 'null' if you press 'ok' without writing anything in the field
 //      - if the prompt only has non-visible characters (spaces, linebreaks and such) that isn't a meaningful task either
 //        TIP: the following expression '!(/\S/.test(stringVariableName))' will return 'true' if variable 'stringVariableName' is a string with only whitespace.
-
-// Adds all buttons from buttons array to yout todolist - has to be last and can't be deleted
-addButtonsToTodoList(buttons);
